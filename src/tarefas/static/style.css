@@ -1,0 +1,162 @@
+@font-face {
+    font-family: 'Ghastly Panic';
+    src: url('fonts/GhastlyPanic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inked God';
+    src: url('fonts/InkedGod.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inked God', sans-serif;
+    background-color: #5b7fb4;
+    min-height: 100vh;
+    padding: 50px 20px 80px;
+    color: #2f5b77;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Ghastly Panic', cursive;
+    font-size: 2.4rem;
+    font-weight: normal;
+    color: #f9f8fe;
+    text-align: center;
+    margin-bottom: 36px;
+    letter-spacing: 2px;
+    line-height: 1.3;
+    
+    text-shadow:
+        3px 3px 0 #001a66,
+        -2px -2px 0 #001a66,
+        2px -2px 0 #001a66,
+        -2px 2px 0 #001a66,
+        0 0 18px rgba(0, 0, 0, 0.35);
+}
+
+input[type="text"],
+input[type="date"] {
+    font-family: 'Inked God', sans-serif;
+    font-size: 1.15rem;
+    padding: 14px 18px;
+    border: 3px solid #001052;
+    border-radius: 10px;
+    background-color: #30497a;
+    color: #160057;
+    outline: none;
+    margin: 8px;
+    transition: background-color 0.2s, border-color 0.2s, transform 0.15s;
+}
+
+input[type="text"]::placeholder {
+    color: #103459;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus {
+    background-color: #0033aa;
+    border-color: #99e6ff;
+    transform: scale(1.02);
+}
+
+input[type="text"] {
+    min-width: 280px;
+}
+
+button {
+    font-family: 'Inked God', sans-serif;
+    font-size: 1.15rem;
+    padding: 14px 28px;
+    margin: 8px;
+    border: 3px solid #ff008c;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.15s, background-color 0.2s, box-shadow 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+button[onclick="adicionarTarefa()"] {
+    background-color: #ff0080;
+    color: #49012e;
+    box-shadow: 0 6px 0 #63034e;
+}
+
+button[onclick="adicionarTarefa()"]:hover {
+    background-color: #e6f2ff;
+    transform: translateY(-3px);
+    box-shadow: 0 9px 0 #003399;
+}
+
+button[onclick="adicionarTarefa()"]:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #003399;
+}
+
+#listaTarefas {
+    margin-top: 48px;
+    width: 100%;
+    max-width: 540px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+#listaTarefas > div {
+    background-color: #001a4d;
+    border: 3px solid #ffffff;
+    border-radius: 12px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    color: #ffffff;
+    font-family: 'Inked God', sans-serif;
+    font-size: 1.15rem;
+    box-shadow: 0 6px 0 #000d26;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+#listaTarefas > div:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 9px 0 #000d26;
+}
+
+#listaTarefas button {
+    font-family: 'Inked God', sans-serif;
+    background-color: #ff3366;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 9px 16px;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-transform: none;
+    letter-spacing: 0;
+    box-shadow: 0 4px 0 #990033;
+}
+
+#listaTarefas button:hover {
+    background-color: #ff4d7a;
+    transform: scale(1.07);
+}
+
+#listaTarefas button:active {
+    transform: scale(0.96) translateY(2px);
+    box-shadow: 0 2px 0 #990033;
+}
