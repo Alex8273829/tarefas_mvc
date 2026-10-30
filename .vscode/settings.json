@@ -1,0 +1,8 @@
+{
+    "termina.integrated.env.windows" : {
+        "PYTHONPATH": "${workspaceFolde}/tarefas"
+    },
+    "python.terminal.useEnvFile": true,
+    "editor.rulers": [70, 80],
+    "files.autoSave": "afterDelay"
+}
